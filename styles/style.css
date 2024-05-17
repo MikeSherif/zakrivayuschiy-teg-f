@@ -35,7 +35,7 @@
     align-items: center;
     gap: 25px;
     font-family: var(--accent-font-family), sans-serif;
-    font-variation-settings:"wght" var(--title-font-weight);
+    font-weight: var(--title-font-weight);
     outline: 2px solid var(--accent-color);
     margin-block: 100px;
     padding-block-end: 25px;
