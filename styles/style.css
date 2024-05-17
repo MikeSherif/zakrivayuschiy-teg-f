@@ -311,7 +311,7 @@
     mix-blend-mode: difference;
 }
 
-.dialog {
+.dialog-save {
     font-family: var(--accent-font-family);
     color: var(--accent-color);
     font-size: var(--interactive-font-size);
@@ -322,7 +322,7 @@
 
 }
 
-.dialog[open] {
+.dialog-save[open] {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -330,34 +330,35 @@
     justify-content: center;
 }
 
-.dialog[open] .dialog__content {
+.dialog-save[open] .dialog__content {
     inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.dialog[open] .dialog__content-svg {
+.dialog-save[open] .dialog__content-svg {
     width: 39px;
     height: 39px;
     display: block;
     align-self: center;
 }
 
-.dialog[open] .dialog__text {
+.dialog-save[open] .dialog__text {
     font-family: var(--title-font-weight);
     line-height: 21px;
 }
 
-.dialog[open] .dialog__button {
+.dialog-save[open] .dialog__button {
     position: relative;
     inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
     block-size: 38px;
     background-color: var(--background-color);
     border: 2px solid var(--accent-color);
+    cursor: pointer;
 }
 
-.dialog::backdrop {
+.dialog-save::backdrop {
     background: var(--accent-color);
     opacity: 0.75;
 }

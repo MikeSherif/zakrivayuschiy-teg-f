@@ -435,25 +435,27 @@
     </article>
 </main>
 <footer class="footer">
-    <button type="button" class="footer__button" onclick="window['dialog-id'].showModal()"
-            aria-controls="dialog-id">
+    <button type="button" class="footer__button" onclick="window['dialog-save'].showModal()"
+            aria-controls="dialog-save">
         <svg viewBox="0 0 24 24" class="footer__button-svg">
             <use href="../images/floppy.svg#floppy" fill="currentColor"/>
         </svg>
         <span class="button__text">Сохранить на память</span>
     </button>
 </footer>
-<dialog class="dialog" id="dialog-id">
+<dialog class="dialog-save" id="dialog-save">
     <div class="dialog__content">
         <div class="dialog__content-svg">
             <svg viewBox="0 0 24 24" class="footer__button-svg dialog__content-svg">
                 <use href="../images/floppy.svg#floppy" fill="currentColor"/>
             </svg>
         </div>
-        <p class="dialog__text">Вставьте </br>дискету, чтобы продолжить</p>
+        <p class="dialog__text">Вставьте <br>дискету, чтобы продолжить</p>
     </div>
-    <button class="dialog__button" type="button"
-            onclick="window['dialog-id'].close()"><span class="button__text">ок</span></button>
+    <form method="dialog">
+        <button class="dialog__button" type="button"
+                onclick="window['dialog-save'].close()"><span class="button__text">ок</span></button>
+    </form>
 </dialog>
 <script src="./scripts/like.js"></script>
 </body>
