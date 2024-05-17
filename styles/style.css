@@ -77,7 +77,6 @@
     font-weight: var(--title-font-weight);
     font-size: var(--interactive-font-size);
     text-transform: uppercase;
-    position: relative;
     padding: 0;
 }
 
@@ -140,13 +139,19 @@
     }
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .card {
     background-color: var(--background-color);
 }
 
 .card__title {
     outline: 2px solid var(--accent-color);
-    padding: 3px 0 3px 10px;
+    padding: 3px 10px 3px 10px;
     font-size: 18px;
     line-height: 22px;
 }
@@ -245,16 +250,16 @@
     cursor: pointer;
 }
 
-.card__like-button:focus, .footer__button:focus {
+.card__like-button:focus, .footer__button:focus, .dialog__button:focus {
     outline: none;
 }
 
-.card__like-button:focus-visible, .footer__button:focus-visible {
+.card__like-button:focus-visible, .footer__button:focus-visible, .dialog__button:focus-visible {
     box-shadow: 2px 2px 0 var(--accent-color);
     transition: box-shadow 0.3s ease;
 }
 
-.card__like-button::after, .footer__button::after {
+.card__like-button::after, .footer__button::after, .dialog__button::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -267,7 +272,7 @@
     transform-origin: left;
 }
 
-.card__like-button:hover::after, .footer__button:hover::after {
+.card__like-button:hover::after, .footer__button:hover::after, .dialog__button:hover::after {
     transform: scaleX(1);
 }
 
@@ -304,5 +309,83 @@
     width: 21px;
     color: var(--difference-color);
     mix-blend-mode: difference;
+}
 
+.dialog {
+    font-family: var(--accent-font-family);
+    color: var(--accent-color);
+    font-size: var(--interactive-font-size);
+    block-size: 191px;
+    inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+    background-color: var(--background-color);
+    border: 2px solid var(--accent-color);
+
+}
+
+.dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog[open] .dialog__content {
+    inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.dialog[open] .dialog__content-svg {
+    width: 39px;
+    height: 39px;
+    display: block;
+    align-self: center;
+}
+
+.dialog[open] .dialog__text {
+    font-family: var(--title-font-weight);
+    line-height: 21px;
+}
+
+.dialog[open] .dialog__button {
+    position: relative;
+    inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
+    block-size: 38px;
+    background-color: var(--background-color);
+    border: 2px solid var(--accent-color);
+}
+
+.dialog::backdrop {
+    background: var(--accent-color);
+    opacity: 0.75;
+}
+
+.brightness {
+    filter: brightness(300%);
+}
+
+.contrast {
+    filter: contrast(50%);
+}
+
+.invert {
+    filter: invert(0.7);
+}
+
+.grayscale {
+    filter: grayscale(0.9);
+}
+
+.saturate {
+    filter: saturate(228%) brightness(300%);
+}
+
+.hue-rotate {
+    filter: hue-rotate(-95deg);
+}
+
+.sepia {
+    filter: sepia(110%);
 }
