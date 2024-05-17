@@ -4,23 +4,39 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
-:root.theme-light{
-    --tittle-font-weight: 700;
+:root.theme-light {
+    --title-font-weight: 400;
     --text-font-weight: 400;
+    --font-weight-bald: 700;
     --background-color: #FFFFFF;
+    --difference-color: #FFFFFF;
     --accent-color: #000000;
+    --background-image: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0%, #1a1a1a 100%);
 }
 
-:root.theme-dark{
-    --tittle-font-weight: 785;
+:root.theme-dark {
+    --title-font-weight: 400;
     --text-font-weight: 465;
+    --font-weight-bald: 785;
     --background-color: #000000;
+    --difference-color: #00CC14;
     --accent-color: #00CC14;
+    --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c 0%, #004306 100%);
 }
 
 @media (prefers-color-scheme: dark) {
-    --tittle-font-weight: 785;
-    --text-font-weight: 465;
-    --background-color: #000000;
-    --accent-color: #00CC14;
+    :root.theme-dark {
+        --title-font-weight: 400;
+        --text-font-weight: 465;
+        --font-weight-bald: 785;
+        --background-color: #000000;
+        --accent-color: #00CC14;
+        --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
+        repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
+        linear-gradient(to bottom, #007f0c 0%, #004306 100%);
+    }
 }
