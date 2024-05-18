@@ -70,10 +70,10 @@
     margin-left: 20px;
 }
 
-.theme-menu__item{
+.theme-menu__item {
     font-family: var(--accent-font-family), fantasy;
     font-size: 14px;
-    font-variation-settings:"wght" var(--title-font-weight);
+    font-variation-settings: "wght" var(--title-font-weight);
     color: var(--accent-color);
 }
 
@@ -151,7 +151,7 @@
     padding: 5px 10px;
     font-size: 18px;
     line-height: 22px;
-    font-variation-settings:"wght" var(--font-weight-bald);
+    font-variation-settings: "wght" var(--font-weight-bald);
 }
 
 .card__img-container {
@@ -171,7 +171,7 @@
     top: 25px;
     right: 25px;
     font-family: var(--accent-font-family), sans-serif;
-    font-variation-settings:"wght" var(--title-font-weight);
+    font-variation-settings: "wght" var(--title-font-weight);
     font-size: var(--interactive-font-size);
     color: var(--accent-color);
     text-transform: uppercase;
@@ -208,7 +208,7 @@
 .card__container-content-text {
     font-family: var(--basic-font-family), fantasy;
     font-size: 18px;
-    font-variation-settings:"wght" var(--text-font-weight);
+    font-variation-settings: "wght" var(--text-font-weight);
     line-height: 21px;
 }
 
@@ -238,7 +238,7 @@
     border: 2px solid var(--accent-color);
 }
 
-.button{
+.button {
     block-size: 38px;
     position: relative;
     display: flex;
@@ -286,7 +286,7 @@
     mix-blend-mode: difference;
     font-family: var(--accent-font-family);
     color: var(--difference-color);
-    font-variation-settings:"wght" var(--title-font-weight);
+    font-variation-settings: "wght" var(--title-font-weight);
     font-size: var(--interactive-font-size);
 }
 
@@ -305,7 +305,7 @@
     line-height: 12.6px;
 }
 
-.footer__button .button__text{
+.footer__button .button__text {
     min-inline-size: 266px;
 }
 
@@ -399,14 +399,14 @@
 }
 
 @media (width <= 375px) {
-    .footer__button{
+    .footer__button {
         block-size: 84px;
         flex-direction: column;
         justify-content: center;
         gap: 8px;
     }
 
-    .footer__button-svg{
+    .footer__button-svg {
         width: 28px;
         height: 28px;
     }
