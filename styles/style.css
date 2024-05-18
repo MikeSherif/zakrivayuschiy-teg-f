@@ -169,7 +169,7 @@
 .card__img-container-label {
     position: absolute;
     top: 25px;
-    right: 25px;
+    right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
     font-family: var(--accent-font-family), sans-serif;
     font-variation-settings: "wght" var(--title-font-weight);
     font-size: var(--interactive-font-size);
