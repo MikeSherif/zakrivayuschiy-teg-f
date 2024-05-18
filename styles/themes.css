@@ -29,11 +29,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root.theme-dark {
+    :root {
         --title-font-weight: 400;
         --text-font-weight: 465;
         --font-weight-bald: 785;
         --background-color: #000000;
+        --difference-color: #00CC14;
         --accent-color: #00CC14;
         --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
