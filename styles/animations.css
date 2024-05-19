@@ -75,6 +75,7 @@
 
 .like-icon:active .core {
     fill: var(--fill-color);
+    transition-delay: unset;
 }
 
 .like-icon:active .main-body {
@@ -84,6 +85,7 @@
 
 .like-icon.is-liked .core {
     fill: var(--fill-color);
+    transition-delay: unset;
 }
 
 .like-icon.is-liked .main-body {

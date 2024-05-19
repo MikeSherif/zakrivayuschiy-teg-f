@@ -248,6 +248,7 @@
     background-color: transparent;
     border: 2px solid var(--accent-color);
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
 .card__like-button {
@@ -260,7 +261,6 @@
 
 .button:focus-visible {
     box-shadow: 2px 2px 0 var(--accent-color);
-    transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -284,7 +284,7 @@
     position: relative;
     z-index: 1;
     mix-blend-mode: difference;
-    font-family: var(--accent-font-family);
+    font-family: var(--accent-font-family), fantasy;
     color: var(--difference-color);
     font-variation-settings: "wght" var(--title-font-weight);
     font-size: var(--interactive-font-size);
@@ -298,10 +298,9 @@
 }
 
 .footer__button {
-    justify-content: space-between;
+    gap: 8px;
     block-size: 55px;
     inline-size: 100%;
-    padding: 0 20px;
     line-height: 12.6px;
 }
 
@@ -318,7 +317,7 @@
 }
 
 .dialog-save {
-    font-family: var(--accent-font-family);
+    font-family: var(--accent-font-family), fantasy;
     color: var(--accent-color);
     font-size: var(--interactive-font-size);
     block-size: 191px;
@@ -351,9 +350,10 @@
 }
 
 .dialog-save[open] .dialog__text {
-    font-family: var(--title-font-weight);
+    font-weight: var(--title-font-weight);
     line-height: 21px;
     inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
+    text-transform: uppercase;
 }
 
 .dialog-save[open] .dialog__button {
