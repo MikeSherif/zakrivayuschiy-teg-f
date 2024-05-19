@@ -363,6 +363,7 @@
     background-color: var(--background-color);
     border: 2px solid var(--accent-color);
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .dialog-save::backdrop {
